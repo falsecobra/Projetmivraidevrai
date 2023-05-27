@@ -11,7 +11,7 @@
 int lancer_manche(int **colonnec, int **colonnep, int nb_manche, int manche_tt,
                   int temps, int *score_j1, int *score_j2, char *j1, char *j2,
                   int *dernier_coup, int **prom, int *existe_prom_j1,
-                  int *existe_prom_j2) {
+                  int *existe_prom_j2,int ordo_promx,int abci_promx,int ordo_promo,int abci_promo) {
   time_t temps_debut, temps_fin; // structure adaptée aux éléments temporels
   time(&temps_debut);
   int tour = 1;
@@ -24,6 +24,12 @@ int lancer_manche(int **colonnec, int **colonnep, int nb_manche, int manche_tt,
   }
   
   initialisation(colonnep, nb_manche);
+  if (*existe_prom_j1){
+              colonnep[ordo_promx][abci_promx]+=2;//pour garder la promotion
+            }
+  if (*existe_prom_j2){
+              colonnep[ordo_promo][abci_promo]+=2;//pour garder la promotion
+            }
   init_prom(prom);
   int estdeplace = 1;
   

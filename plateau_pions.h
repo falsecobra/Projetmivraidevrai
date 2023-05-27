@@ -17,7 +17,7 @@ int *initialisation(int **colonne, int num_manche);
 int lancer_manche(int **colonnes, int **colonnep, int nb_manche, int manche_tt,
                   int temps, int *score_j1, int *score_j2, char *j1, char *j2,
                   int *dernier_coup, int **prom, int *existe_prom_j1,
-                  int *existe_prom_j2);
+                  int *existe_prom_j2,int ordo_promx,int abci_promx,int ordo_promo,int abci_promo);
 
 char renvoi_signepion(int pion);
 

@@ -82,10 +82,10 @@ int main() {
   int existe_prom_j1 = 0;
   int existe_prom_j2 = 0;
 
-  int ordo_promx;
-  int abci_promx;
-  int ordo_promo;
-  int abci_promo;
+  int ordo_promx=0;
+  int abci_promx=0;
+  int ordo_promo=0;
+  int abci_promo=0;
 
 
   time_t temps_début, temps_dif,
@@ -110,7 +110,7 @@ int main() {
       while (num_manche <= nb_manche) {
         lancer_manche(colonnesc, colonnesp, num_manche, nb_manche, 0, &score_j1,
                       &score_j2, joueur1, joueur2, &dernier_coup, prom,
-                      &existe_prom_j1, &existe_prom_j2);
+                      &existe_prom_j1, &existe_prom_j2,ordo_promx,abci_promx,ordo_promo,abci_promo);
         num_manche += 1;
         if ((existe_prom_j1 == 0) || (existe_prom_j2 == 0)) {
 
@@ -130,18 +130,12 @@ int main() {
             //}
             promouvoir(colonnesp, prom, dernier_coup,&ordo_promo,&abci_promo);
           }
-          initialisation(colonnesp,3);
+          
           
           
         }
         //printf("%d %d %d %d", ordo_promx,abci_promx,ordo_promo,abci_promo);
-        initialisation(colonnesp,3);
-        if (existe_prom_j1){
-              colonnesp[ordo_promx][abci_promx]+=2;//pour garder la promotion
-            }
-          if (existe_prom_j2){
-              colonnesp[ordo_promo][abci_promo]+=2;//pour garder la promotion
-            }
+       
       }
       if (score_j1 == score_j2) {
         printf("\n\nIl y a égalité, une nouvelle manche décisive va démarrer "
@@ -150,7 +144,7 @@ int main() {
         num_manche += 1;
         lancer_manche(colonnesc, colonnesp, num_manche += 1, nb_manche, 0,
                       &score_j1, &score_j2, joueur1, joueur2, &dernier_coup,
-                      prom, &existe_prom_j1, &existe_prom_j2);
+                      prom, &existe_prom_j1, &existe_prom_j2,ordo_promx,abci_promx,ordo_promx,abci_promx);
       }
       if (score_j1 == max(score_j1, score_j2)) {
         printf("\n\n\n%s Gagne la partie, bien joué !\n\n\n", joueur1);
