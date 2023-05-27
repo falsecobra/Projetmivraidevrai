@@ -1,1 +1,9 @@
 Toutes les manipulations et consignes sont indiquées au fur et à mesure du jeu. 
+Faute de temps, il manque la possibilité de sauvegarder, nous avons fais le choix de supprimer cette fonctionnalité car elle n'était pas utile et son implémentation était complexe.
+Hormis cela tout le cahier des charges est respecté, il n'y a aucun dysfonctionnement de l'application connu. 
+Il faut utiliser le makefile pour compiler
+
+
+
+    Antonin Schellekens, Francisco Tornos, Zachary Weiss, classe mi 2.
+
