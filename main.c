@@ -101,11 +101,12 @@ int main() {
     if (reponse == 1) {
       printf("\n");
       char joueur1[21] = {"alex"};
-      char joueur2[21] = {"hitchens"};
-      // nb_manche = demande_manche();
+      char joueur2[21] = {"michel"};
+      
+      nb_manche = demande_manche();
 
-      // selecjoueur1(joueur1);
-      // selecjoueur2(joueur2);
+      selecjoueur1(joueur1);
+      selecjoueur2(joueur2);
       while (num_manche <= nb_manche) {
         lancer_manche(colonnesc, colonnesp, num_manche, nb_manche, 0, &score_j1,
                       &score_j2, joueur1, joueur2, &dernier_coup, prom,
