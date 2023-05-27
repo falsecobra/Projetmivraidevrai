@@ -1,7 +1,8 @@
 Toutes les manipulations et consignes sont indiquées au fur et à mesure du jeu. 
-Faute de temps, il manque la possibilité de sauvegarder, nous avons fais le choix de supprimer cette fonctionnalité car elle n'était pas utile et son implémentation était complexe.
+Faute de temps, il manque la possibilité de sauvegarder, cependant ce n'est pas une fonctionnalité utile et elle est pourtant assez complêxe à implémenter
+
 Hormis cela tout le cahier des charges est respecté, il n'y a aucun dysfonctionnement de l'application connu. 
-Il faut utiliser le makefile pour compiler
+Il faut utiliser le makefile pour compiler.
 
 
 
